@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Abeyance-1651.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\Abeyance.cpp.obj"
+"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\BaseCharacter.cpp.obj"
+"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\Abeyance.init.gen.cpp.obj"
+"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\BaseCharacter.gen.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-1651.lib"
