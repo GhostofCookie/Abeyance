@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\Abeyance.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{14F64332-1414-4FC2-86D1-0C279CF262FC}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Abeyance.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\AbeyanceEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{BCF958D1-5080-453F-9399-88DA8D3994F7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\Abeyance">
+			<UniqueIdentifier>{1C85AABF-EBF0-4D39-ABDB-8D817D8CDA6D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\Abeyance\Abeyance.Build.cs">
+			<Filter>Source\Abeyance</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\Abeyance\Abeyance.cpp">
+			<Filter>Source\Abeyance</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Abeyance\Abeyance.h">
+			<Filter>Source\Abeyance</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Abeyance\BaseCharacter.cpp">
+			<Filter>Source\Abeyance</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Abeyance\BaseCharacter.h">
+			<Filter>Source\Abeyance</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

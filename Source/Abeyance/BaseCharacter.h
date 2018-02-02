@@ -14,23 +14,52 @@ public:
 	// Sets default values for this character's properties
 	ABaseCharacter();
 
-	// Character Health
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Base Character")
-		float Health = 100;
+	// Character Health.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Health = 100;
 
 	// Is the character dead?
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
-		bool IsDead = false;
+	bool IsDead = false;
+
+	// Character Mana.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Lucidity = 100;
+
+	// Character XP and Ability multiplier.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Understanding = 0;
+
+	// How fast health regenerates
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
+	float HealthRegenRate = 0.5;
+
+	// How fast mana regenerates
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
+	float ManaRegenRate = 0.5;
+
+	// Character's ability to coherse enemies to their side.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Influence = 5; // This is a percentage.
+
+	// The chance that the character will be ignored.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float ShadowPercentage = 10; // This is a percentage.
+
+    // Calculate health function
+	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
+	virtual void CalculateHealth(float Delta);
+
+	// Calculate health function
+	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
+	virtual void CalculateMana(float Delta);
 
 	// Calculate death function (helper)
 	virtual void CalculateDead();
 
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
-		virtual void CalculateHealth(float Delta);
-
-	UPROPERTY(Category = "Character Movement", EditAnywhere, meta = (ClampMin = "0.0", ClampMax = "180.0", UIMin = "0.0", UIMax = "180.0"))
-		float WalkableFloorAngle = 180;
+		virtual void CalculateUnderstanding(float Delta);
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;

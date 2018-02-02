@@ -41,6 +41,18 @@ void ABaseCharacter::CalculateDead()
 		IsDead = false;
 }
 
+// Calculate health function
+void ABaseCharacter::CalculateMana(float Delta)
+{
+	Lucidity += Delta;
+}
+
+// Calculate health function
+void ABaseCharacter::CalculateUnderstanding(float Delta)
+{
+	Understanding += Delta;
+}
+
 // Called to bind functionality to input
 void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
