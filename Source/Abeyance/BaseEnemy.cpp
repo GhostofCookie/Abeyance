@@ -25,13 +25,6 @@ void ABaseEnemy::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void ABaseEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-
 // Calculate death function (helper)
 void ABaseEnemy::CalculateDead()
 {
