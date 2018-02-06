@@ -46,20 +46,25 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float ShadowPercentage = 10; // This is a percentage.
 
+	// Melee Damage
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MeleeDamage = 10;
+
+	// Ranged damage
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float RangeDamage = 10;
+
     // Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
 	virtual void CalculateHealth(float Delta);
 
 	// Calculate health function
-	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
-	virtual void CalculateMana(float Delta);
+	UFUNCTION(BlueprintCallable, Category = "Base Character")
+	virtual void CalculateStat(FName Name, float Delta);
 
 	// Calculate death function (helper)
 	virtual void CalculateDead();
 
-	// Calculate health function
-	UFUNCTION(BlueprintCallable, Category = "Base Character")
-		virtual void CalculateUnderstanding(float Delta);
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;

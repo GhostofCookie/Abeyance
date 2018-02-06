@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeAbeyance_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Abeyance",
 				PKG_CompiledIn | 0x00000000,
-				0xB2EF3EE6,
-				0x9C35E686,
+				0xBAC850A4,
+				0x30D14C88,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

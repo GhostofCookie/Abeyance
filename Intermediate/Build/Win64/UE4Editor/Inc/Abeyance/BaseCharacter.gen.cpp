@@ -18,8 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Abeyance();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateHealth();
-	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateMana();
-	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateUnderstanding();
+	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateStat();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_MoveForward();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_MoveRight();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_StartJump();
@@ -30,8 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		UClass* Class = ABaseCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "CalculateHealth", (Native)&ABaseCharacter::execCalculateHealth },
-			{ "CalculateMana", (Native)&ABaseCharacter::execCalculateMana },
-			{ "CalculateUnderstanding", (Native)&ABaseCharacter::execCalculateUnderstanding },
+			{ "CalculateStat", (Native)&ABaseCharacter::execCalculateStat },
 			{ "MoveForward", (Native)&ABaseCharacter::execMoveForward },
 			{ "MoveRight", (Native)&ABaseCharacter::execMoveRight },
 			{ "StartJump", (Native)&ABaseCharacter::execStartJump },
@@ -64,43 +62,21 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateMana()
+	UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateStat()
 	{
-		struct BaseCharacter_eventCalculateMana_Parms
+		struct BaseCharacter_eventCalculateStat_Parms
 		{
+			FName Name;
 			float Delta;
 		};
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta = { UE4CodeGen_Private::EPropertyClass::Float, "Delta", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(BaseCharacter_eventCalculateMana_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta = { UE4CodeGen_Private::EPropertyClass::Float, "Delta", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(BaseCharacter_eventCalculateStat_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FNamePropertyParams NewProp_Name = { UE4CodeGen_Private::EPropertyClass::Name, "Name", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(BaseCharacter_eventCalculateStat_Parms, Name), METADATA_PARAMS(nullptr, 0) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Delta,
-			};
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "Category", "Calculate Stats" },
-				{ "ModuleRelativePath", "BaseCharacter.h" },
-				{ "ToolTip", "Calculate health function" },
-			};
-#endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, "CalculateMana", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, sizeof(BaseCharacter_eventCalculateMana_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-		}
-		return ReturnFunction;
-	}
-	UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateUnderstanding()
-	{
-		struct BaseCharacter_eventCalculateUnderstanding_Parms
-		{
-			float Delta;
-		};
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta = { UE4CodeGen_Private::EPropertyClass::Float, "Delta", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(BaseCharacter_eventCalculateUnderstanding_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Delta,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Name,
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -109,7 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 				{ "ToolTip", "Calculate health function" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, "CalculateUnderstanding", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, sizeof(BaseCharacter_eventCalculateUnderstanding_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, "CalculateStat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, sizeof(BaseCharacter_eventCalculateStat_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -209,8 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_ABaseCharacter_CalculateHealth, "CalculateHealth" }, // 3629810924
-				{ &Z_Construct_UFunction_ABaseCharacter_CalculateMana, "CalculateMana" }, // 3540070094
-				{ &Z_Construct_UFunction_ABaseCharacter_CalculateUnderstanding, "CalculateUnderstanding" }, // 1839166862
+				{ &Z_Construct_UFunction_ABaseCharacter_CalculateStat, "CalculateStat" }, // 508479099
 				{ &Z_Construct_UFunction_ABaseCharacter_MoveForward, "MoveForward" }, // 2454903078
 				{ &Z_Construct_UFunction_ABaseCharacter_MoveRight, "MoveRight" }, // 2850488394
 				{ &Z_Construct_UFunction_ABaseCharacter_StartJump, "StartJump" }, // 1603016209
@@ -223,6 +198,22 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 				{ "ModuleRelativePath", "BaseCharacter.h" },
 			};
 #endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RangeDamage_MetaData[] = {
+				{ "Category", "Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Ranged damage" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RangeDamage = { UE4CodeGen_Private::EPropertyClass::Float, "RangeDamage", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, RangeDamage), METADATA_PARAMS(NewProp_RangeDamage_MetaData, ARRAY_COUNT(NewProp_RangeDamage_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeleeDamage_MetaData[] = {
+				{ "Category", "Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Melee Damage" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MeleeDamage = { UE4CodeGen_Private::EPropertyClass::Float, "MeleeDamage", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, MeleeDamage), METADATA_PARAMS(NewProp_MeleeDamage_MetaData, ARRAY_COUNT(NewProp_MeleeDamage_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShadowPercentage_MetaData[] = {
 				{ "Category", "Stats" },
@@ -289,6 +280,8 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health = { UE4CodeGen_Private::EPropertyClass::Float, "Health", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, Health), METADATA_PARAMS(NewProp_Health_MetaData, ARRAY_COUNT(NewProp_Health_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_RangeDamage,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MeleeDamage,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ShadowPercentage,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Influence,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ManaRegenRate,
@@ -316,7 +309,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseCharacter, 4168497656);
+	IMPLEMENT_CLASS(ABaseCharacter, 2690796340);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABaseCharacter(Z_Construct_UClass_ABaseCharacter, &ABaseCharacter::StaticClass, TEXT("/Script/Abeyance"), TEXT("ABaseCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABaseCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
