@@ -28,7 +28,7 @@ void ABaseCharacter::Tick(float DeltaTime)
 // Implement Calculate Health
 void ABaseCharacter::CalculateHealth(float Delta)
 {
-	Health += Delta;
+	Health -= Delta;
 	CalculateDead();
 }
 
