@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\Abeyance.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{2291432D-F392-4ABF-AC82-CDB57AAA8F3F}</UniqueIdentifier>
+			<UniqueIdentifier>{1AB1AF4F-0A70-48E1-8133-D462FA492CB6}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Abeyance.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{25205E0F-B16E-4816-AF41-0FF11CD4B36D}</UniqueIdentifier>
+			<UniqueIdentifier>{42D0B331-0D09-4221-9C34-F2B7A71AF435}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -28,7 +28,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\Abeyance">
-			<UniqueIdentifier>{39025631-DB1B-4BC1-9F5E-FAB007304EBE}</UniqueIdentifier>
+			<UniqueIdentifier>{58EF7B24-57C8-4DD3-BAC4-053CB97E758F}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Abeyance\Abeyance.Build.cs">
 			<Filter>Source\Abeyance</Filter>
@@ -43,6 +43,12 @@
 			<Filter>Source\Abeyance</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\Abeyance\BaseCharacter.h">
+			<Filter>Source\Abeyance</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\Abeyance\BaseEnemy.cpp">
+			<Filter>Source\Abeyance</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\Abeyance\BaseEnemy.h">
 			<Filter>Source\Abeyance</Filter>
 		</ClInclude >
 	</ItemGroup>

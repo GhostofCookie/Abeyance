@@ -1,16 +1,15 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\Abeyance.vcxproj]
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\UE4.vcxproj]
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\UE4.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\Abeyance.vcxproj]
   Couldn't parse '<<<<<<< HEAD' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Couldn't parse '=======' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Couldn't parse '>>>>>>> e1b3e770446ed7dc172b2227abdb48321f42ada9' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
-  Performing full C++ include scan (hot reloading a new target)
   Using 'git status' to determine working set for adaptive non-unity build.
-  Creating makefile for hot reloading AbeyanceEditor (game project files are newer)
+  Creating makefile for hot reloading AbeyanceEditor (modules to compile have changed)
   Compiling game modules for hot reload
   Parsing headers for AbeyanceEditor
     Running UnrealHeaderTool "D:\TomasRigaux\Unreal Projects\Abeyance\Abeyance.uproject" "D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\AbeyanceEditor\Development\AbeyanceEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for AbeyanceEditor in 14.4308666 seconds
-  Distributing 9 actions to XGE
+  Reflection code generated for AbeyanceEditor in 12.0204107 seconds
+  Distributing 4 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
       License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
@@ -18,17 +17,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  SharedPCH.Engine.cpp (1:12.44 at +0:00)
-  Abeyance.cpp (0:00.93 at +1:12)
-  BaseCharacter.cpp (0:03.43 at +1:13)
-  Abeyance.init.gen.cpp (0:01.09 at +1:16)
-  BaseCharacter.gen.cpp (0:01.68 at +1:18)
-  ModuleVersionResource.rc.inl (0:00.28 at +1:19)
-  PCLaunch.rc (0:00.25 at +1:19)
-  UE4Editor-Abeyance-8541.dll (0:01.80 at +1:20)
-     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-8541.suppressed.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-8541.suppressed.exp
-  UE4Editor-Abeyance-8541.lib (0:00.32 at +1:22)
-     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-8541.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-8541.exp
+  BaseCharacter.cpp (0:01.06 at +0:00)
+  BaseCharacter.gen.cpp (0:01.17 at +0:01)
+  UE4Editor-Abeyance-6012.dll (0:02.44 at +0:02)
+     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.suppressed.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.suppressed.exp
+  UE4Editor-Abeyance-6012.lib (0:00.28 at +0:04)
+     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.exp
   ---------------------- Done ----------------------
    
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -39,4 +33,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\
   
   
   Deploying AbeyanceEditor Win64 Development...
-  Total build time: 108.24 seconds (XGE executor: 83.78 seconds)
+  Total build time: 26.40 seconds (XGE executor: 5.43 seconds)
