@@ -49,21 +49,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execCalculateUnderstanding) \
+	DECLARE_FUNCTION(execCalculateStat) \
 	{ \
+		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Delta); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->CalculateUnderstanding(Z_Param_Delta); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCalculateMana) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Delta); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		this->CalculateMana(Z_Param_Delta); \
+		this->CalculateStat(Z_Param_Name,Z_Param_Delta); \
 		P_NATIVE_END; \
 	} \
  \
@@ -113,21 +105,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execCalculateUnderstanding) \
+	DECLARE_FUNCTION(execCalculateStat) \
 	{ \
+		P_GET_PROPERTY(UNameProperty,Z_Param_Name); \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Delta); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->CalculateUnderstanding(Z_Param_Delta); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execCalculateMana) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_Delta); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		this->CalculateMana(Z_Param_Delta); \
+		this->CalculateStat(Z_Param_Name,Z_Param_Delta); \
 		P_NATIVE_END; \
 	} \
  \

@@ -28,8 +28,24 @@ void ABaseCharacter::Tick(float DeltaTime)
 // Implement Calculate Health
 void ABaseCharacter::CalculateHealth(float Delta)
 {
-	Health -= Delta;
+	Health += Delta;
 	CalculateDead();
+}
+
+void ABaseCharacter::CalculateStat(FName Name, float Delta)
+{
+	if (Name == "range")
+		RangeDamage += Delta;
+	else if (Name == "melee")
+		MeleeDamage += Delta;
+	else if (Name == "influence")
+		Influence += Delta;
+	else if (Name == "shadow")
+		ShadowPercentage += Delta;
+	else if (Name == "understanding")
+		Understanding += Delta;
+	else if (Name == "mana" || Name == "MANA")
+		Lucidity += Delta;
 }
 
 // Implement Calculate Dead
@@ -39,18 +55,6 @@ void ABaseCharacter::CalculateDead()
 		IsDead = true;
 	else
 		IsDead = false;
-}
-
-// Calculate health function
-void ABaseCharacter::CalculateMana(float Delta)
-{
-	Lucidity += Delta;
-}
-
-// Calculate health function
-void ABaseCharacter::CalculateUnderstanding(float Delta)
-{
-	Understanding += Delta;
 }
 
 // Called to bind functionality to input

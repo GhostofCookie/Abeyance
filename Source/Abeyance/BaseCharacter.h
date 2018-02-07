@@ -46,20 +46,25 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float ShadowPercentage = 10; // This is a percentage.
 
+	// Melee Damage
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MeleeDamage = 10;
+
+	// Ranged damage
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float RangeDamage = 10;
+
     // Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
 	virtual void CalculateHealth(float Delta);
 
 	// Calculate health function
-	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
-	virtual void CalculateMana(float Delta);
+	UFUNCTION(BlueprintCallable, Category = "Base Character")
+	virtual void CalculateStat(FName Name, float Delta);
 
 	// Calculate death function (helper)
 	virtual void CalculateDead();
 
-	// Calculate health function
-	UFUNCTION(BlueprintCallable, Category = "Base Character")
-		virtual void CalculateUnderstanding(float Delta);
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
@@ -78,19 +83,19 @@ public:
 
 	// Handles input for moving forward and backward.
 	UFUNCTION()
-		void MoveForward(float Value);
+	void MoveForward(float Value);
 
 	// Handles input for moving right and left.
 	UFUNCTION()
-		void MoveRight(float Value);
+	void MoveRight(float Value);
 
 	// Sets jump flag when key is pressed.
 	UFUNCTION()
-		void StartJump();
+	void StartJump();
 
 	// Clears jump flag when key is released.
 	UFUNCTION()
-		void StopJump();
+	void StopJump();
 
 
 };
