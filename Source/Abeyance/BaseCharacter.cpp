@@ -44,7 +44,7 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 		ShadowPercentage += Delta;
 	else if (Name == "understanding")
 		Understanding += Delta;
-	else if (Name == "mana")
+	else if (Name == "mana" || Name == "MANA")
 		Lucidity += Delta;
 }
 

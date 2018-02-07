@@ -1,14 +1,13 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\UE4.vcxproj]
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\Abeyance.vcxproj]
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\Abeyance.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.props(31,3): warning MSB4011: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Makefile.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.cpp.props (31,3)". This is most likely a build authoring error. This subsequent import will be ignored. [D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\ProjectFiles\UE4.vcxproj]
   Couldn't parse '<<<<<<< HEAD' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Couldn't parse '=======' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Couldn't parse '>>>>>>> e1b3e770446ed7dc172b2227abdb48321f42ada9' in UnrealBuildTool.ConfigFileSection of D:\TomasRigaux\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Using 'git status' to determine working set for adaptive non-unity build.
-  Creating makefile for hot reloading AbeyanceEditor (modules to compile have changed)
   Compiling game modules for hot reload
   Parsing headers for AbeyanceEditor
     Running UnrealHeaderTool "D:\TomasRigaux\Unreal Projects\Abeyance\Abeyance.uproject" "D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\AbeyanceEditor\Development\AbeyanceEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for AbeyanceEditor in 12.0204107 seconds
+  Reflection code generated for AbeyanceEditor in 14.4421197 seconds
   Distributing 4 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
@@ -17,12 +16,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  BaseCharacter.cpp (0:01.06 at +0:00)
-  BaseCharacter.gen.cpp (0:01.17 at +0:01)
-  UE4Editor-Abeyance-6012.dll (0:02.44 at +0:02)
-     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.suppressed.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.suppressed.exp
-  UE4Editor-Abeyance-6012.lib (0:00.28 at +0:04)
-     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-6012.exp
+  BaseCharacter.cpp (0:01.17 at +0:00)
+  BaseCharacter.gen.cpp (0:01.20 at +0:01)
+  UE4Editor-Abeyance-3646.dll (0:01.10 at +0:02)
+     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-3646.suppressed.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-3646.suppressed.exp
+  UE4Editor-Abeyance-3646.lib (0:00.34 at +0:03)
+     Creating library D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-3646.lib and object D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-3646.exp
   ---------------------- Done ----------------------
    
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -33,4 +32,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\
   
   
   Deploying AbeyanceEditor Win64 Development...
-  Total build time: 26.40 seconds (XGE executor: 5.43 seconds)
+  Total build time: 20.46 seconds (XGE executor: 4.21 seconds)
