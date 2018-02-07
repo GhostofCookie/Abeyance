@@ -272,6 +272,14 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			auto NewProp_IsDead_SetBit = [](void* Obj){ ((ABaseCharacter*)Obj)->IsDead = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDead = { UE4CodeGen_Private::EPropertyClass::Bool, "IsDead", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000020015, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(ABaseCharacter), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_IsDead_SetBit)>::SetBit, METADATA_PARAMS(NewProp_IsDead_MetaData, ARRAY_COUNT(NewProp_IsDead_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[] = {
+				{ "Category", "Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Character Max Health." },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxHealth = { UE4CodeGen_Private::EPropertyClass::Float, "MaxHealth", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, MaxHealth), METADATA_PARAMS(NewProp_MaxHealth_MetaData, ARRAY_COUNT(NewProp_MaxHealth_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
 				{ "Category", "Stats" },
 				{ "ModuleRelativePath", "BaseCharacter.h" },
@@ -289,6 +297,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Understanding,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Lucidity,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_IsDead,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MaxHealth,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Health,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -309,7 +318,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseCharacter, 2690796340);
+	IMPLEMENT_CLASS(ABaseCharacter, 1581796451);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABaseCharacter(Z_Construct_UClass_ABaseCharacter, &ABaseCharacter::StaticClass, TEXT("/Script/Abeyance"), TEXT("ABaseCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABaseCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

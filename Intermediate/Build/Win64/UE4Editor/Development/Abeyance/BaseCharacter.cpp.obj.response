@@ -24,9 +24,9 @@
 /wd4838
 /w44668
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source"
-/I "D:\TomasRigaux\Unreal Projects\Abeyance\Source"
-/I "D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Inc\Abeyance"
-/I "D:\TomasRigaux\Unreal Projects\Abeyance\Source\Abeyance"
+/I "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source"
+/I "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Inc\Abeyance"
+/I "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source\Abeyance"
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public"
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source\Runtime\Core\Public\Async"
@@ -359,9 +359,9 @@
 /FI"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\TomasRigaux\Unreal Projects\Abeyance\Source\Abeyance\BaseCharacter.cpp"
-/FI"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\Definitions.Abeyance.h"
-/Fo"D:\TomasRigaux\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\BaseCharacter.cpp.obj"
+"C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source\Abeyance\BaseCharacter.cpp"
+/FI"C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\Definitions.Abeyance.h"
+/Fo"C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\Abeyance\BaseCharacter.cpp.obj"
 /TP
 /GR-
 /W4

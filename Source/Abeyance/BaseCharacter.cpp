@@ -28,7 +28,7 @@ void ABaseCharacter::Tick(float DeltaTime)
 // Implement Calculate Health
 void ABaseCharacter::CalculateHealth(float Delta)
 {
-	Health += Delta;
+	Health -= Delta;
 	CalculateDead();
 }
 
@@ -44,8 +44,13 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 		ShadowPercentage += Delta;
 	else if (Name == "understanding")
 		Understanding += Delta;
-	else if (Name == "mana" || Name == "MANA")
+	else if (Name == "mana")
 		Lucidity += Delta;
+	else if (Name == "health")
+	{
+		MaxHealth += Delta;
+		CalculateDead();
+	}
 }
 
 // Implement Calculate Dead

@@ -18,6 +18,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Health = 100;
 
+	// Character Max Health.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MaxHealth = 100;
+
 	// Is the character dead?
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
 	bool IsDead = false;

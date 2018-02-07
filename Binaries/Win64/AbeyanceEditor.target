@@ -16,15 +16,15 @@
 	},
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-Abeyance-6012.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-Abeyance-2593.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-Abeyance-6012.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-Abeyance-2593.pdb",
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Abeyance-6012.lib",
+			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Abeyance-2593.lib",
 			"Type": "ImportLibrary"
 		},
 		{
