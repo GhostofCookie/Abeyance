@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	UPackage* Z_Construct_UPackage__Script_Abeyance();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateHealth();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateStat();
+	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateXp();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_MoveForward();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_MoveRight();
 	ABEYANCE_API UFunction* Z_Construct_UFunction_ABaseCharacter_StartJump();
@@ -30,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "CalculateHealth", (Native)&ABaseCharacter::execCalculateHealth },
 			{ "CalculateStat", (Native)&ABaseCharacter::execCalculateStat },
+			{ "CalculateXp", (Native)&ABaseCharacter::execCalculateXp },
 			{ "MoveForward", (Native)&ABaseCharacter::execMoveForward },
 			{ "MoveRight", (Native)&ABaseCharacter::execMoveRight },
 			{ "StartJump", (Native)&ABaseCharacter::execStartJump },
@@ -86,6 +88,31 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, "CalculateStat", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, sizeof(BaseCharacter_eventCalculateStat_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ABaseCharacter_CalculateXp()
+	{
+		struct BaseCharacter_eventCalculateXp_Parms
+		{
+			float Delta;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta = { UE4CodeGen_Private::EPropertyClass::Float, "Delta", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(BaseCharacter_eventCalculateXp_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Delta,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Calculate Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Calculate health function" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, "CalculateXp", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020400, sizeof(BaseCharacter_eventCalculateXp_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -186,6 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_ABaseCharacter_CalculateHealth, "CalculateHealth" }, // 3629810924
 				{ &Z_Construct_UFunction_ABaseCharacter_CalculateStat, "CalculateStat" }, // 508479099
+				{ &Z_Construct_UFunction_ABaseCharacter_CalculateXp, "CalculateXp" }, // 2992729554
 				{ &Z_Construct_UFunction_ABaseCharacter_MoveForward, "MoveForward" }, // 2454903078
 				{ &Z_Construct_UFunction_ABaseCharacter_MoveRight, "MoveRight" }, // 2850488394
 				{ &Z_Construct_UFunction_ABaseCharacter_StartJump, "StartJump" }, // 1603016209
@@ -263,6 +291,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Lucidity = { UE4CodeGen_Private::EPropertyClass::Float, "Lucidity", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, Lucidity), METADATA_PARAMS(NewProp_Lucidity_MetaData, ARRAY_COUNT(NewProp_Lucidity_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SkillPoints_MetaData[] = {
+				{ "Category", "Base Character" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_SkillPoints = { UE4CodeGen_Private::EPropertyClass::Int, "SkillPoints", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000020005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, SkillPoints), METADATA_PARAMS(NewProp_SkillPoints_MetaData, ARRAY_COUNT(NewProp_SkillPoints_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDead_MetaData[] = {
 				{ "Category", "Base Character" },
 				{ "ModuleRelativePath", "BaseCharacter.h" },
@@ -271,6 +306,22 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 #endif
 			auto NewProp_IsDead_SetBit = [](void* Obj){ ((ABaseCharacter*)Obj)->IsDead = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDead = { UE4CodeGen_Private::EPropertyClass::Bool, "IsDead", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000020015, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(ABaseCharacter), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_IsDead_SetBit)>::SetBit, METADATA_PARAMS(NewProp_IsDead_MetaData, ARRAY_COUNT(NewProp_IsDead_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxXp_MetaData[] = {
+				{ "Category", "Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Character Max Health." },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxXp = { UE4CodeGen_Private::EPropertyClass::Float, "MaxXp", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, MaxXp), METADATA_PARAMS(NewProp_MaxXp_MetaData, ARRAY_COUNT(NewProp_MaxXp_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_XP_MetaData[] = {
+				{ "Category", "Stats" },
+				{ "ModuleRelativePath", "BaseCharacter.h" },
+				{ "ToolTip", "Character Health." },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_XP = { UE4CodeGen_Private::EPropertyClass::Float, "XP", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(ABaseCharacter, XP), METADATA_PARAMS(NewProp_XP_MetaData, ARRAY_COUNT(NewProp_XP_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[] = {
 				{ "Category", "Stats" },
@@ -296,7 +347,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HealthRegenRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Understanding,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Lucidity,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SkillPoints,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_IsDead,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MaxXp,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_XP,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MaxHealth,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Health,
 			};
@@ -318,7 +372,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseCharacter, 1581796451);
+	IMPLEMENT_CLASS(ABaseCharacter, 3369185084);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABaseCharacter(Z_Construct_UClass_ABaseCharacter, &ABaseCharacter::StaticClass, TEXT("/Script/Abeyance"), TEXT("ABaseCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABaseCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

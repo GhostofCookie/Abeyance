@@ -22,9 +22,20 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float MaxHealth = 100;
 
+	// Character Health.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float XP = 0;
+
+	// Character Max Health.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MaxXp = 1000;
+
 	// Is the character dead?
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
 	bool IsDead = false;
+
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Base Character")
+	int SkillPoints = 0;
 
 	// Character Mana.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
@@ -65,6 +76,10 @@ public:
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
 	virtual void CalculateStat(FName Name, float Delta);
+
+	// Calculate health function
+	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
+	virtual void CalculateXp(float Delta);
 
 	// Calculate death function (helper)
 	virtual void CalculateDead();

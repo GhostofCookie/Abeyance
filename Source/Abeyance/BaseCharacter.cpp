@@ -53,6 +53,18 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 	}
 }
 
+void ABaseCharacter::CalculateXp(float Delta)
+{
+	if (XP >= MaxXp || XP == MaxXp)
+	{
+		XP -= MaxXp;
+		MaxXp *= 1.3;
+		SkillPoints += 1;
+	}
+	XP += Delta;
+}
+
+
 // Implement Calculate Dead
 void ABaseCharacter::CalculateDead()
 {
