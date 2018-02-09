@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ABEYANCE_BaseCharacter_generated_h
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execStopJump) \
 	{ \
@@ -78,7 +78,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execStopJump) \
 	{ \
@@ -143,7 +143,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_INCLASS_NO_PURE_DECLS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseCharacter(); \
 	friend ABEYANCE_API class UClass* Z_Construct_UClass_ABaseCharacter(); \
@@ -153,7 +153,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_INCLASS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseCharacter(); \
 	friend ABEYANCE_API class UClass* Z_Construct_UClass_ABaseCharacter(); \
@@ -163,7 +163,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_STANDARD_CONSTRUCTORS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseCharacter) \
@@ -176,7 +176,7 @@ private: \
 public:
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_ENHANCED_CONSTRUCTORS \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseCharacter(ABaseCharacter&&); \
@@ -187,32 +187,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseCharacter)
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET
-#define Abeyance_Source_Abeyance_BaseCharacter_h_8_PROLOG
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_GENERATED_BODY_LEGACY \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET
+#define cccccc_Source_Abeyance_BaseCharacter_h_8_PROLOG
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_INCLASS \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_STANDARD_CONSTRUCTORS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_INCLASS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Abeyance_Source_Abeyance_BaseCharacter_h_11_GENERATED_BODY \
+#define cccccc_Source_Abeyance_BaseCharacter_h_11_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_INCLASS_NO_PURE_DECLS \
-	Abeyance_Source_Abeyance_BaseCharacter_h_11_ENHANCED_CONSTRUCTORS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_PRIVATE_PROPERTY_OFFSET \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_INCLASS_NO_PURE_DECLS \
+	cccccc_Source_Abeyance_BaseCharacter_h_11_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Abeyance_Source_Abeyance_BaseCharacter_h
+#define CURRENT_FILE_ID cccccc_Source_Abeyance_BaseCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
