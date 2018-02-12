@@ -2,12 +2,23 @@
   Couldn't parse '=======' in UnrealBuildTool.ConfigFileSection of C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Couldn't parse '>>>>>>> e1b3e770446ed7dc172b2227abdb48321f42ada9' in UnrealBuildTool.ConfigFileSection of C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Config\DefaultEngine.ini
   Using 'git status' to determine working set for adaptive non-unity build.
-  Compiling game modules for hot reload
-  Performing 3 actions (4 in parallel)
+  Parsing headers for AbeyanceEditor
+    Running UnrealHeaderTool "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Abeyance.uproject" "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\AbeyanceEditor\Development\AbeyanceEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for AbeyanceEditor in 46.6372001 seconds
+  Deleting old hot reload file: "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Binaries\Win64\UE4Editor-Abeyance-2632.dll".
+  Deleting old hot reload file: "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Binaries\Win64\UE4Editor-Abeyance-2632.pdb".
+  Performing 9 actions (4 in parallel)
+  SharedPCH.Engine.cpp
+  BaseEnemy.cpp
+  Abeyance.init.gen.cpp
   BaseCharacter.cpp
-  [2/3] Link UE4Editor-Abeyance-2632.dll
-  [3/3] Link UE4Editor-Abeyance-2632.lib
-     Creating library C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-2632.suppressed.lib and object C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-2632.suppressed.exp
-     Creating library C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-2632.lib and object C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Abeyance-2632.exp
-  Deploying AbeyanceEditor Win64 Development...
-  Total build time: 3.92 seconds (Local executor: 1.52 seconds)
+  Abeyance.cpp
+c1xx : fatal error C1083: Cannot open source file: 'D:\cccccc\Source\Abeyance\BaseCharacter.cpp': No such file or directoryc1xx: fatal error C1083: Cannot open source file: 'D:\cccccc\Intermediate\Build\Win64\UE4Editor\Inc\Abeyance\Abeyance.init.gen.cpp': No such file or directoryc1xx: fatal error C1083: Cannot open source file: 'D:\cccccc\Source\Abeyance\Abeyance.cpp': No such file or directory
+  
+  
+  BaseEnemy.gen.cpp
+  BaseCharacter.gen.cpp
+c1xx : fatal error C1083: Cannot open source file: 'D:\cccccc\Intermediate\Build\Win64\UE4Editor\Inc\Abeyance\BaseCharacter.gen.cpp': No such file or directory
+ERROR : UBT error : Failed to produce item: C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Binaries\Win64\UE4Editor-Abeyance.pdb
+  Total build time: 150.84 seconds (Local executor: 0.00 seconds)
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): error MSB3075: The command ""C:\Program Files\Epic Games\UE_4.18\Engine\Build\BatchFiles\Build.bat" AbeyanceEditor Win64 Development "C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Abeyance.uproject" -waitmutex" exited with code 5. Please verify that you have sufficient rights to run this command.

@@ -1,3 +1,15 @@
+[About]
+=======
+This is the repository for the video game Abeyance; a project for NMED 4710, at the University of Lethbridge.
+
+[Contributors]
+==============
+- Autumn Read
+- Cody Crawford
+- Kiyomi Jesse
+- Tomas Rigaux
+- Zach Shortt
+
 [File Directory]
 ================
 
