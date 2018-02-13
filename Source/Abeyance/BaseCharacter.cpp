@@ -28,9 +28,42 @@ void ABaseCharacter::Tick(float DeltaTime)
 // Implement Calculate Health
 void ABaseCharacter::CalculateHealth(float Delta)
 {
-	Health += Delta;
+	Health -= Delta;
 	CalculateDead();
 }
+
+void ABaseCharacter::CalculateStat(FName Name, float Delta)
+{
+	if (Name == "range")
+		RangeDamage += Delta;
+	else if (Name == "melee")
+		MeleeDamage += Delta;
+	else if (Name == "influence")
+		Influence += Delta;
+	else if (Name == "shadow")
+		ShadowPercentage += Delta;
+	else if (Name == "understanding")
+		Understanding += Delta;
+	else if (Name == "mana")
+		Lucidity += Delta;
+	else if (Name == "health")
+	{
+		MaxHealth += Delta;
+		CalculateDead();
+	}
+}
+
+void ABaseCharacter::CalculateXp(float Delta)
+{
+	XP += Delta;
+	if (XP >= MaxXp || XP == MaxXp)
+	{
+		XP -= MaxXp;
+		MaxXp *= 1.3;
+		SkillPoints += 1;
+	}
+}
+
 
 // Implement Calculate Dead
 void ABaseCharacter::CalculateDead()
