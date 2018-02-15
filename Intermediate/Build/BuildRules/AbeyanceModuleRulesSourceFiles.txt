@@ -1,3 +1,3 @@
-D:\TomasRigaux\Unreal Projects\Abeyance\Source\Abeyance\Abeyance.Build.cs
-D:\TomasRigaux\Unreal Projects\Abeyance\Source\Abeyance.Target.cs
-D:\TomasRigaux\Unreal Projects\Abeyance\Source\AbeyanceEditor.Target.cs
+D:\ZackShortt\Abeyance\Source\Abeyance\Abeyance.Build.cs
+D:\ZackShortt\Abeyance\Source\Abeyance.Target.cs
+D:\ZackShortt\Abeyance\Source\AbeyanceEditor.Target.cs
