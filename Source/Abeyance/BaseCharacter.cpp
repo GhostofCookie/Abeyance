@@ -22,6 +22,10 @@ void ABaseCharacter::BeginPlay()
 void ABaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (Health < MaxHealth)
+		Health += 1*HealthRegenRate;
+	if (Health > MaxHealth)
+		Health = MaxHealth;
 
 }
 

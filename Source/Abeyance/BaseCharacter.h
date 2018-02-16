@@ -34,12 +34,15 @@ public:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
 	bool IsDead = false;
 
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Base Character")
+	UPROPERTY(BlueprintReadWrite  , VisibleAnywhere, Category = "Base Character")
 	int SkillPoints = 0;
 
 	// Character Mana.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Lucidity = 100;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MaxLucidity = 100;
 
 	// Character XP and Ability multiplier.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
