@@ -27,6 +27,11 @@ void ABaseCharacter::Tick(float DeltaTime)
 	if (Health > MaxHealth)
 		Health = MaxHealth;
 
+	if (Lucidity < MaxLucidity)
+		Lucidity += 1 * ManaRegenRate;
+	if (Lucidity > MaxLucidity)
+		Lucidity = MaxLucidity;
+
 }
 
 // Implement Calculate Health
@@ -49,7 +54,7 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 	else if (Name == "understanding")
 		Understanding += Delta;
 	else if (Name == "mana")
-		Lucidity += Delta;
+		MaxLucidity += Delta;
 	else if (Name == "health")
 	{
 		MaxHealth += Delta;
