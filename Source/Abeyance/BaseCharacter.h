@@ -72,9 +72,17 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float RangeDamage = 10;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	bool AffectingStat = false;
+
+
     // Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
 	virtual void CalculateHealth(float Delta);
+
+	// Calculate mana function
+	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
+	virtual void CalculateMana(float Delta);
 
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
@@ -95,6 +103,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 public:
 	// Called every frame
