@@ -50,11 +50,11 @@ public:
 
 	// How fast health regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float HealthRegenRate = 0.5;
+	float HealthRegenRate = 1.5;
 
 	// How fast mana regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float ManaRegenRate = 0.5;
+	float ManaRegenRate = 1.5;
 
 	// Character's ability to coherse enemies to their side.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")

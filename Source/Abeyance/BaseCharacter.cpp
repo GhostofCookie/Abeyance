@@ -25,12 +25,12 @@ void ABaseCharacter::Tick(float DeltaTime)
 	if (!AffectingStat)
 	{
 		if (Health < MaxHealth)
-			Health += 1 * HealthRegenRate;
+			Health += DeltaTime * HealthRegenRate;
 		if (Health > MaxHealth)
 			Health = MaxHealth;
 
 		if (Lucidity < MaxLucidity)
-			Lucidity += 1 * ManaRegenRate;
+			Lucidity += DeltaTime * ManaRegenRate;
 		if (Lucidity > MaxLucidity)
 			Lucidity = MaxLucidity;
 	}
@@ -48,8 +48,8 @@ void ABaseCharacter::CalculateHealth(float Delta)
 void ABaseCharacter::CalculateMana(float Delta)
 {
 	AffectingStat = true;
-	Lucidity -= Delta;
-	CalculateDead();
+	if(Delta <= Lucidity)
+		Lucidity -= Delta;
 }
 
 void ABaseCharacter::CalculateStat(FName Name, float Delta)
