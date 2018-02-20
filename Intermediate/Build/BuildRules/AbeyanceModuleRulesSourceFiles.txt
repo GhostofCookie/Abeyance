@@ -1,3 +1,0 @@
-C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source\Abeyance\Abeyance.Build.cs
-C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source\Abeyance.Target.cs
-C:\Users\Rigaux_PC\Documents\Unreal Projects\Abeyance\Source\AbeyanceEditor.Target.cs
