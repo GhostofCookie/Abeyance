@@ -1,3 +1,0 @@
-D:\kiyomi\Abeyance\Source\Abeyance\Abeyance.Build.cs
-D:\kiyomi\Abeyance\Source\Abeyance.Target.cs
-D:\kiyomi\Abeyance\Source\AbeyanceEditor.Target.cs
