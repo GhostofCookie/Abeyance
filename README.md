@@ -8,7 +8,7 @@ This is the repository for the video game Abeyance; a project for NMED 4710, at 
 - Cody Crawford
 - Kiyomi Jesse
 - Tomas Rigaux
-- Zach Shortt
+- Zack Shortt
 
 [File Directory]
 ================
