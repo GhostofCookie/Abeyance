@@ -34,12 +34,15 @@ public:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
 	bool IsDead = false;
 
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Base Character")
+	UPROPERTY(BlueprintReadWrite  , VisibleAnywhere, Category = "Base Character")
 	int SkillPoints = 0;
 
 	// Character Mana.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Lucidity = 100;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float MaxLucidity = 100;
 
 	// Character XP and Ability multiplier.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
@@ -47,11 +50,11 @@ public:
 
 	// How fast health regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float HealthRegenRate = 0.5;
+	float HealthRegenRate = 1.5;
 
 	// How fast mana regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float ManaRegenRate = 0.5;
+	float ManaRegenRate = 1.5;
 
 	// Character's ability to coherse enemies to their side.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
@@ -69,9 +72,17 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float RangeDamage = 10;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	bool AffectingStat = false;
+
+
     // Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
 	virtual void CalculateHealth(float Delta);
+
+	// Calculate mana function
+	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
+	virtual void CalculateMana(float Delta);
 
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
@@ -92,6 +103,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 public:
 	// Called every frame

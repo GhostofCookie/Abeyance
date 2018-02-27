@@ -22,14 +22,34 @@ void ABaseCharacter::BeginPlay()
 void ABaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (!AffectingStat)
+	{
+		if (Health < MaxHealth)
+			Health += DeltaTime * HealthRegenRate;
+		if (Health > MaxHealth)
+			Health = MaxHealth;
 
+		if (Lucidity < MaxLucidity)
+			Lucidity += DeltaTime * ManaRegenRate;
+		if (Lucidity > MaxLucidity)
+			Lucidity = MaxLucidity;
+	}
 }
 
 // Implement Calculate Health
 void ABaseCharacter::CalculateHealth(float Delta)
 {
+	AffectingStat = true;
 	Health -= Delta;
 	CalculateDead();
+}
+
+// Implement Calculate Mana
+void ABaseCharacter::CalculateMana(float Delta)
+{
+	AffectingStat = true;
+	if(Delta <= Lucidity)
+		Lucidity -= Delta;
 }
 
 void ABaseCharacter::CalculateStat(FName Name, float Delta)
@@ -45,7 +65,10 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 	else if (Name == "understanding")
 		Understanding += Delta;
 	else if (Name == "mana")
-		Lucidity += Delta;
+	{
+		MaxLucidity += Delta;
+		AffectingStat = true;
+	}
 	else if (Name == "health")
 	{
 		MaxHealth += Delta;
@@ -55,13 +78,13 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta)
 
 void ABaseCharacter::CalculateXp(float Delta)
 {
+	XP += Delta;
 	if (XP >= MaxXp || XP == MaxXp)
 	{
 		XP -= MaxXp;
 		MaxXp *= 1.3;
 		SkillPoints += 1;
 	}
-	XP += Delta;
 }
 
 
@@ -121,6 +144,7 @@ void ABaseCharacter::PostEditChangeProperty(FPropertyChangedEvent& PropertyChang
 {
 	IsDead = false;
 	Health = 100;
+	AffectingStat = false;
 
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 

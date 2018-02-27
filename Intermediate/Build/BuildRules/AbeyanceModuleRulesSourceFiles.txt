@@ -1,3 +1,0 @@
-D:\cccccc\Source\Abeyance\Abeyance.Build.cs
-D:\cccccc\Source\Abeyance.Target.cs
-D:\cccccc\Source\AbeyanceEditor.Target.cs
