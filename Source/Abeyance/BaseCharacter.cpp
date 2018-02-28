@@ -25,12 +25,12 @@ void ABaseCharacter::Tick(float DeltaTime)
 	if (!AffectingStat)
 	{
 		if (Health < MaxHealth)
-			Health += DeltaTime * HealthRegenRate;
+			Health += HealthRegenRate;
 		if (Health > MaxHealth)
 			Health = MaxHealth;
 
 		if (Lucidity < MaxLucidity)
-			Lucidity += DeltaTime * ManaRegenRate;
+			Lucidity += ManaRegenRate;
 		if (Lucidity > MaxLucidity)
 			Lucidity = MaxLucidity;
 	}
@@ -52,27 +52,50 @@ void ABaseCharacter::CalculateMana(float Delta)
 		Lucidity -= Delta;
 }
 
-void ABaseCharacter::CalculateStat(FName Name, float Delta)
+void ABaseCharacter::CalculateStat(FName Name, float Delta, FName Effect, bool Active)
 {
-	if (Name == "range")
-		RangeDamage += Delta;
-	else if (Name == "melee")
-		MeleeDamage += Delta;
-	else if (Name == "influence")
-		Influence += Delta;
-	else if (Name == "shadow")
-		ShadowPercentage += Delta;
-	else if (Name == "understanding")
-		Understanding += Delta;
-	else if (Name == "mana")
+	if (Active)
 	{
-		MaxLucidity += Delta;
-		AffectingStat = true;
-	}
-	else if (Name == "health")
-	{
-		MaxHealth += Delta;
-		CalculateDead();
+		if (Effect == "add")
+		{
+			if (Name == "range")
+				RangeDamage += Delta;
+			else if (Name == "melee")
+				MeleeDamage += Delta;
+			else if (Name == "influence")
+				Influence += Delta;
+			else if (Name == "shadow")
+				ShadowPercentage += Delta;
+			else if (Name == "understanding")
+				Understanding += Delta;
+			else if (Name == "rem_regen")
+				HealthRegenRate += Delta;
+			else if (Name == "mana")
+			{
+				MaxLucidity += Delta;
+				AffectingStat = true;
+			}
+			else if (Name == "health")
+			{
+				MaxHealth += Delta;
+				CalculateDead();
+			}
+		}
+		else if (Effect == "mult")
+		{
+			if (Name == "range")
+				RangeDamage *= Delta;
+			else if (Name == "melee")
+				MeleeDamage *= Delta;
+			else if (Name == "influence")
+				Influence *= Delta;
+			else if (Name == "shadow")
+				ShadowPercentage *= Delta;
+			else if (Name == "understanding")
+				Understanding *= Delta;
+			else if (Name == "speed")
+				SpeedMultiplier = Delta;
+		}
 	}
 }
 
