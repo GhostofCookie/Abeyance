@@ -30,6 +30,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float MaxXp = 1000;
 
+	// Character speed multipler.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float SpeedMultiplier;
+
 	// Is the character dead?
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
 	bool IsDead = false;
@@ -50,11 +54,11 @@ public:
 
 	// How fast health regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float HealthRegenRate = 1.5;
+	float HealthRegenRate = 0;
 
 	// How fast mana regenerates
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Rates")
-	float ManaRegenRate = 1.5;
+	float ManaRegenRate = 0.1;
 
 	// Character's ability to coherse enemies to their side.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
@@ -75,7 +79,6 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	bool AffectingStat = false;
 
-
     // Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
 	virtual void CalculateHealth(float Delta);
@@ -86,7 +89,7 @@ public:
 
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Base Character")
-	virtual void CalculateStat(FName Name, float Delta);
+	virtual void CalculateStat(FName Name, float Delta, FName Effect, bool Active);
 
 	// Calculate health function
 	UFUNCTION(BlueprintCallable, Category = "Calculate Stats")
