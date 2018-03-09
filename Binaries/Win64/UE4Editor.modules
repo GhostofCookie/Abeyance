@@ -2,10 +2,6 @@
 	"BuildId": "3709383",
 	"Modules": 
 	{
-<<<<<<< HEAD
-		"Abeyance": "UE4Editor-Abeyance-4746.dll"
-=======
 		"Abeyance": "UE4Editor-Abeyance.dll"
->>>>>>> 4133d84354d1a68de594f8d5546c6bee1f5aa13c
 	}
 }
