@@ -57,19 +57,19 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta, FName Effect, bool A
 	{
 		if (Effect == "add")
 		{
-			if (Name == "range")
+			if (Name == "range" || Name == "all")
 				RangeDamage += Delta;
-			else if (Name == "melee")
+			else if (Name == "melee" || Name == "all")
 				MeleeDamage += Delta;
-			else if (Name == "influence")
+			else if (Name == "influence" || Name == "all")
 				Influence += Delta;
-			else if (Name == "shadow")
+			else if (Name == "shadow" || Name == "all")
 				ShadowPercentage += Delta;
-			else if (Name == "understanding")
+			else if (Name == "understanding" || Name == "all")
 				Understanding += Delta;
-			else if (Name == "rem_regen")
+			else if (Name == "rem_regen" || Name == "all")
 				HealthRegenRate += Delta;
-			else if (Name == "mana")
+			else if (Name == "mana" || Name == "all")
 			{
 				MaxLucidity += Delta;
 				AffectingStat = true;
@@ -82,17 +82,17 @@ void ABaseCharacter::CalculateStat(FName Name, float Delta, FName Effect, bool A
 		}
 		else if (Effect == "mult")
 		{
-			if (Name == "range")
+			if (Name == "range" || Name == "all")
 				RangeDamage *= Delta;
-			else if (Name == "melee")
+			else if (Name == "melee" || Name == "all")
 				MeleeDamage *= Delta;
-			else if (Name == "influence")
+			else if (Name == "influence" || Name == "all")
 				Influence *= Delta;
-			else if (Name == "shadow")
+			else if (Name == "shadow" || Name == "all")
 				ShadowPercentage *= Delta;
-			else if (Name == "understanding")
+			else if (Name == "understanding" || Name == "all")
 				Understanding *= Delta;
-			else if (Name == "speed")
+			else if (Name == "speed" || Name == "all")
 				SpeedMultiplier = Delta;
 		}
 	}
