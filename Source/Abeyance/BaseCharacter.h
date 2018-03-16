@@ -32,7 +32,7 @@ public:
 
 	// Character speed multipler.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float SpeedMultiplier;
+	float SpeedMultiplier = 1;
 
 	// Is the character dead?
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
