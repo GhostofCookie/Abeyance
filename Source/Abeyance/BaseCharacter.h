@@ -43,7 +43,7 @@ public:
 
 	// Character Mana.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
-	float Lucidity = 100;
+	float Lucidity = 0;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float MaxLucidity = 100;
@@ -63,6 +63,10 @@ public:
 	// Character's ability to coherse enemies to their side.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	float Influence = 5; // This is a percentage.
+
+	// Character's defense.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	float Immunity = 5; // This is a percentage.
 
 	// The chance that the character will be ignored.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
